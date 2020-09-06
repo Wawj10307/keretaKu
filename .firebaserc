@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "cadense-669b3"
+  },
+  "targets": {
+    "cadense-669b3": {
+      "hosting": {
+        "web": [
+          "cadense-669b3"
+        ]
+      }
+    }
+  }
+}
