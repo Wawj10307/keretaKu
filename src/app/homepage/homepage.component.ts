@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
-export interface Item { name: string; }
+export interface Item { name: string; liter: string; price: string; sale: string; stock: number; type: string; weight: string; }
 
 @Component({
   selector: 'app-homepage',
@@ -12,10 +12,11 @@ export interface Item { name: string; }
 
 export class HomepageComponent implements OnInit {
     private itemsCollection: AngularFirestoreCollection<Item>;
-    items: Observable<any[]>;
+    items: Observable<Item[]>;
     constructor(private afs: AngularFirestore){
-        this.itemsCollection = afs.collection('items');
+        this.itemsCollection = afs.collection<Item>('inventory/engineOil/Moto7');
         this.items = this.itemsCollection.valueChanges();
+        console.log(this.items);
     }
     ngOnInit(): void {
     }
