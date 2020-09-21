@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "cadenseWeb"
+  "defaultProject": "cadenseWeb",
+  "cli": {
+    "analytics": "650c23ab-6373-4dee-a0af-64e14474953e"
+  }
 }
